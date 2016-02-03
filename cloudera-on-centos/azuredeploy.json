@@ -64,9 +64,9 @@
     },
     "storageAccountType": {
       "type": "string",
-      "defaultValue": "Premium_LRS",
+      "defaultValue": "Standard_LRS",
       "metadata": {
-        "description": "The type of the Storage Account to be created (Default to Premium_LRS)"
+        "description": "The type of the Storage Account to be created (Default to Standard_LRS)"
       }
     },
     "virtualNetworkName": {
@@ -123,10 +123,11 @@
       "defaultValue": "Eval",
       "allowedValues": [
         "Eval",
-        "Prod"
+        "Prod",
+        "PoC"
       ],
       "metadata": {
-        "description": "T-shirt size of the Cloudera cluster (Eval, Prod)"
+        "description": "T-shirt size of the Cloudera cluster (Eval, Prod, PoC)"
       }
     },
     "numberOfDataNodes": {
@@ -138,7 +139,7 @@
     },
     "vmSize": {
       "type": "string",
-      "defaultValue": "Standard_DS14",
+      "defaultValue": "Standard_DS13",
       "metadata": {
         "description": "The size of the VMs deployed in the cluster (defaults to Standard_DS14)"
       }

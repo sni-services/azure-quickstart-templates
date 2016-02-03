@@ -105,10 +105,11 @@ few as 3 to thousands of data nodes.  The current template will scale at the hig
 
 The following table outlines the deployment topology characteristics for each supported t-shirt size:
 
-| T-Shirt Size | Member Node VM Size | CPU Cores | Memory | Data Disks | # of Master Node VMs | Services Placement of Master Node |
+|| T-Shirt Size || Member Node VM Size || CPU Cores || Memory || Data Disks || # of Master Node VMs || Services Placement of Master Node ||
 |:--- |:---|:---|:---|:---|:---|:---|:---|
-| Eval | Standard_DS14 | 10 | 112 GB | 10x1000 GB | 1 | 1 (primary, secondary, cloudera manager) |
-| Prod | Standard_DS14 | 10 | 112 GB | 10x1000 GB | 3 | 1 primary, 1 standby (HA), 1 cloudera manager |
+| PoC  | Standard_DS13 |  8 |  56 GB |  3x 500 GB | 1 | 1  (primary, secondary, cloudera manager) |
+| Eval | Standard_DS14 | 16 | 112 GB | 10x1000 GB | 1 | 1 (primary, secondary, cloudera manager) |
+| Prod | Standard_DS14 | 16 | 112 GB | 10x1000 GB | 3 | 1 primary, 1 standby (HA), 1 cloudera manager |
 
 ##Connecting to the cluster
 The machines are named according to a specific pattern.  The master node is named based on parameters and using the.
@@ -121,7 +122,7 @@ If the dnsNamePrefix was clouderatest in the West US region, the machine will be
 
 The rest of the master nodes and data nodes of the cluster use the same pattern, with -mn and -dn extensions followed by their number.  For example:
 
-    clouderatest-mn0.westus.cloudapp.azure.com
+  clouderatest-mn0.westus.cloudapp.azure.com
 	clouderatest-mn1.westus.cloudapp.azure.com
 	clouderatest-mn2.westus.cloudapp.azure.com
 	clouderatest-dn0.westus.cloudapp.azure.com
